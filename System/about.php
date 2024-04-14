@@ -60,6 +60,9 @@ include 'constants/check-login.php';
 	width:100px;
     object-fit:cover; 
   }
+	.Lorem-Ipsum{
+		line-height: 2;
+	}
   
 
   </style>
@@ -331,206 +334,81 @@ include 'constants/check-login.php';
 				</div>
 			
 			</div>
+			<p></p>
+			<p></p>
+			<p></p>
 
 
-			<div class="pt-0 pb-50">
+			<div class="container">
+                <div class="Lorem-Ipsum" style="font-size: 20px;">
+                    <h2>About the Project</h2>
+										<p></p>
+										<p></p>
+										<p></p>
+                    <p>    This mini project aims to develop a limited interaction job portal facilitating seamless job posting and application processes. The platform allows companies to register, post job openings, and manage applicant data efficiently. Similarly, applicants can register, create detailed profiles, and apply to jobs with ease. While the platform does not support direct acceptance/rejection or interview scheduling, it serves as a centralized hub for data collection. This project focuses on streamlining the job search and hiring process, offering a user-friendly interface for both companies and applicants.</p>
+
+										<h2>Key Features:</h2>
+										<ul>
+											<li> #Company Registration</li>
+											<li>#Job Posting</li>
+											<li>#Applicant Registration</li>
+											<li>#Job Application</li>
+											<li>#Data Management</li>
+											<li>#User-Friendly Interface</li>
+										</ul>
+										<p></p>
+
+										<h2>project scope:</h2>
+
+										<p><b>Limited Interaction:</b> The platform focuses on essential functionalities such as job posting, application submission, and data management.</p>
+										<p><b>Centralized data hub:</b>While the platform does not facilitate direct communication or interview scheduling, it serves as a centralized hub for collecting applicant data and managing job listings.</p>
+										<p><b>efficiently and simplicity:</b>Emphasis is placed on creating a user-friendly interface that simplifies the job search and hiring process for both companies and applicants.</p>
+
+										<h2>development team:</h2>
+
+
+										<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <img src="https://avatars.githubusercontent.com/u/143952673?v=4" class="card-img-top" alt="Profile Picture">
+        <div class="card-body">
+          <h3 class="card-title">Varshith</h3>
+          <p class="card-text"> call me Adolf Hitler.</p>
+          <a href="https://github.com/VarshithPawarHR" class="btn btn-primary stretched-link" target="_blank">View Profile</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStHHmWfIZz6H8y7GUX95JRgPgmn0Y0PFIHK-CMluHzOQ&s" class="card-img-top" alt="Profile Picture">
+        <div class="card-body">
+          <h3 class="card-title">Suraj N </h3>
+          <p class="card-text">hi there , bye there</p>
+          <a href="https://github.com/Surajn2804" class="btn btn-primary stretched-link" target="_blank">View Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p></p>
+<p></p>
+<p></p>
+
+
+
+
+                </div>
+            </div>
+
+
 			
-				<div class="container">
-
-					<div class="row">
 					
-						<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-						
-							<div class="section-title">
-							
-								<br><h2>Random Companies</h2>
-								
-							</div>
-						
-						</div>
-					
-					</div>
-					
-					<div class="row top-company-wrapper with-bg">
-
-							
-					<?php
-					require 'constants/db_config.php';
-					try {
-                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                    $stmt = $conn->prepare("SELECT * FROM tbl_users WHERE role = 'employer' ORDER BY rand() LIMIT 8");
-                    $stmt->execute();
-                    $result = $stmt->fetchAll();
-
-                    foreach($result as $row) {
-					$complogo = $row['avatar'];
-					?>
-					<div class="col-xss-12 col-xs-6 col-sm-4 col-md-3">
-							
-					<div class="top-company">
-					<div class="image">
-					<?php 
-					if ($complogo == null) {
-					print '<center><img class="autofit2" alt="image"  src="images/blank.png"/></center>';
-					}else{
-					echo '<center><img class="autofit2" alt="image"  src="data:image/jpeg;base64,'.base64_encode($complogo).'"/></center>';	
-					}
-					?>
-					</div>
-					<h6><?php echo $row['first_name'];?></h6>
-					<a target="_blank" href="company.php?ref=<?php echo $row['member_no']; ?>">View Company</a>
-					</div>
-							
-					</div>
-					<?php
-					
-                    {
-
-	                }
-					  
-	                }}catch(PDOException $e)
-                    {
-
-                    }
-	
-					?>
-						
-
-						
-						
-					</div>
-
-				</div>
-
-			</div>
-			
-			<div class="bg-light pt-80 pb-80">
-			
-				<div class="container">
 				
-					<div class="row">
-						
-						<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-						
-							<div class="section-title">
-							
-								<h2>Latest Jobs</h2>
-								
-							</div>
-						
-						</div>
-					
-					</div>
-					
-					<div class="row">
-						
-						<div class="col-md-12">
-						
-							<div class="recent-job-wrapper alt-stripe mr-0">
-							<?php
-							require 'constants/db_config.php';
-							try {
-                            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-                            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                            $stmt = $conn->prepare("SELECT * FROM tbl_jobs ORDER BY enc_id DESC LIMIT 8");
-                            $stmt->execute();
-                            $result = $stmt->fetchAll();
-  
-
-                            foreach($result as $row) {
-							$jobcity = $row['city'];
-							$jobcountry = $row['country'];
-							$type = $row['type'];
-							$title = $row['title'];
-							$closingdate = $row['closing_date'];
-							$company_id = $row['company'];
-							$post_date = date_format(date_create_from_format('d/m/Y', $closingdate), 'd');
-                            $post_month = date_format(date_create_from_format('d/m/Y', $closingdate), 'F');
-                            $post_year = date_format(date_create_from_format('d/m/Y', $closingdate), 'Y');
-										   
-							$stmtb = $conn->prepare("SELECT * FROM tbl_users WHERE member_no = '$company_id' and role = 'employer'");
-                            $stmtb->execute();
-                            $resultb = $stmtb->fetchAll();
-							foreach($resultb as $rowb) {
-							$complogo = $rowb['avatar'];
-							$thecompname = $rowb['first_name'];	
-								
-							}
-							
-							if ($type == "Freelance") {
-							$sta = '<div class="job-label label label-success">
-									Freelance
-									</div>';
-											  
-							}
-							if ($type == "Part-time") {
-							$sta = '<div class="job-label label label-danger">
-									Part-time
-									</div>';
-											  
-							}
-							if ($type == "Full-time") {
-							$sta = '<div class="job-label label label-warning">
-									Full-time
-									</div>';
-											  
-							}
-							?>
-							<a class="recent-job-item clearfix" target="_blank" href="explore-job.php?jobid=<?php echo $row['job_id']; ?>">
-							<div class="GridLex-grid-middle">
-							<div class="GridLex-col-5_xs-12">
-							<div class="job-position">
-							<div class="image">
-							<?php 
-							if ($complogo == null) {
-							print '<center><img alt="image"  src="images/blank.png"/></center>';
-							}else{
-							echo '<center><img alt="image" title="'.$thecompname.'" width="180" height="100" src="data:image/jpeg;base64,'.base64_encode($complogo).'"/></center>';	
-							}
-							?>
-							</div>
-							<div class="content">
-							<h4><?php echo "$title"; ?></h4>
-							<p><?php echo "$thecompname"; ?></p>
-							</div>
-							</div>
-							</div>
-							<div class="GridLex-col-5_xs-8_xss-12 mt-10-xss">
-							<div class="job-location">
-							<i class="fa fa-map-marker text-primary"></i> <?php echo "$jobcountry" ?></strong> - <?php echo "$jobcity" ?>
-							</div>
-							</div>
-							<div class="GridLex-col-2_xs-4_xss-12">
-							<?php echo "$sta"; ?>
-							<span class="font12 block spacing1 font400 text-center">Due - <?php echo "$post_month"; ?> <?php echo "$post_date"; ?>, <?php echo "$post_year"; ?></span>
-							</div>
-							</div>
-							</a>
-								
-							<?php
-
-                            }
-	                        }catch(PDOException $e)
-                            { 
-                   
-                             }
-                             ?>
-						
-
-
-
-							
-							</div>
-							
-						</div>
-						
-					</div>
-					
-				</div>
 			
-			</div>
 			
 
 

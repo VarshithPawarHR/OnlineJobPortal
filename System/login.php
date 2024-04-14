@@ -121,16 +121,14 @@ include 'constants/check-login.php';
 							</li>
 							
 							<li>
-								<a href="employers.php">Employers</a>
+								<a href="employers.php">Company</a>
 							</li>
 							
 							<li>
-								<a href="employees.php">Employees</a>
+								<a href="employees.php">Applicant</a>
 							</li>
 							
-							<li>
-								<a href="contact.php">Contact Us</a>
-							</li>
+						
 
 						</ul>
 				
@@ -337,7 +335,7 @@ include 'constants/check-login.php';
 									
 										<div class="footer-about-us">
 											<h5 class="footer-title">About Nightingale Jobs</h5>
-											<p>Nightingale Jobs is a job portal, online job management system developed by Nathaniel Nkrumah for his project in february 2018.</p>
+											<p>Nightingale Jobs is a job portal</p>
 										
 										</div>
 
@@ -348,10 +346,7 @@ include 'constants/check-login.php';
 										<ul class="footer-menu clearfix">
 											<li><a href="./">Home</a></li>
 											<li><a href="job-list.php">Job List</a></li>
-											<li><a href="employers.php">Employers</a></li>
-											<li><a href="employees.php">Employees</a></li>
-											<li><a href="contact.php">Contact Us</a></li>
-											<li><a href="#">Go to top</a></li>
+										
 
 										</ul>
 									
@@ -366,7 +361,7 @@ include 'constants/check-login.php';
 								<h5 class="footer-title">Nightingale Jobs Contact</h5>
 								
 								<p>Address : Takoradi, School Junction PO.BOX AX40</p>
-								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">nightingale.nath2@gmail.com</a></p>
+								
 								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
 								
 
