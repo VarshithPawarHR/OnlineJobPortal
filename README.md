@@ -34,6 +34,6 @@ Follow these steps to set up your project:
 Clone the Repository: Clone this repository to your local machine
 
 Start XAMPP: Start the XAMPP control panel and ensure that Apache and MySQL services are running.
-Database Setup: Import the database schema provided in the database/schema.sql file into your MySQL database using a tool like phpMyAdmin or the MySQL command line.
+Database Setup: Import the database schema provided in the # database/job_portal.sql file into your MySQL database using a tool like phpMyAdmin or the MySQL command line.
 Configuration: Update the database configuration settings in the config.php file with your MySQL database credentials.
 
