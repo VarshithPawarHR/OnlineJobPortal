@@ -96,7 +96,7 @@ $token = $_GET['token'];
 							</li>
 							
 							<li>
-								<a href="contact.php">Contact Us</a>
+								<a href="about.php">about</a>
 							</li>
 
 						</ul>

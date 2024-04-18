@@ -94,11 +94,11 @@ header("location:../");
 							</li>
 							
 							<li>
-								<a href="../employees.php">Employees</a>
+								<a href="../employees.php">applicant</a>
 							</li>
 							
 							<li>
-								<a href="../contact.php">Contact Us</a>
+								<a href="../about.php">about Us</a>
 							</li>
 
 						</ul>

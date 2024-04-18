@@ -133,11 +133,11 @@ foreach($result as $row)
 							</li>
 							
 							<li>
-								<a href="../employees.php">Employees</a>
+								<a href="../employees.php">Applicant</a>
 							</li>
 							
 							<li>
-								<a href="../contact.php">Contact Us</a>
+								<a href="../about.php">aboutUs</a>
 							</li>
 
 						</ul>

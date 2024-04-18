@@ -127,6 +127,9 @@ include 'constants/check-login.php';
 							<li>
 								<a href="employees.php">Applicant</a>
 							</li>
+							<li>
+								<a href="about.php">about</a>
+							</li>
 							
 						
 

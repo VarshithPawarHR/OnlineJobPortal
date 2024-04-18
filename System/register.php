@@ -90,6 +90,9 @@ include 'constants/check-login.php';
 							<li>
 								<a href="contact.php">Contact Us</a>
 							</li>
+							<li>
+								<a href="about.php">about</a>
+							</li>
 
 						</ul>
 				

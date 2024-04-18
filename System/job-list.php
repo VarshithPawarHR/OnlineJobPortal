@@ -127,6 +127,9 @@ $title = "Job List";
 							<li>
 								<a href="employees.php">Job seekers</a>
 							</li>
+							<li>
+								<a href="about.php">about</a>
+							</li>
 							
 						
 

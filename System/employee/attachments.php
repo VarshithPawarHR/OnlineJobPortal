@@ -122,7 +122,7 @@ $page = 1;
 							</li>
 							
 							<li>
-								<a href="../contact.php">Contact Us</a>
+								<a href="../about.php">aboutt Us</a>
 							</li>
 
 						</ul>
